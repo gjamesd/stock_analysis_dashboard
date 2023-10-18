@@ -5,6 +5,5 @@ pandas_datareader==0.10.0
 plotly==5.9.0
 prophet==1.1.5
 streamlit==1.27.2
-pip==23.3
 TA_Lib==0.4.28
 yfinance==0.2.31
