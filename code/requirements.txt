@@ -7,3 +7,4 @@ prophet==1.1.5
 streamlit==1.27.2
 TA_Lib==0.4.28
 yfinance==0.2.31
+streamlit==1.27.2
