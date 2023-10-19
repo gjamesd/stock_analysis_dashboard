@@ -26,7 +26,7 @@ import talib as ta
 st.write("# Stock Analysis Dashboard by James")
 
 
-
+#get ticker for yahoo finance api
 ticker = st.text_input("Please input the 4 letter code for the stock you would like to investigate")
 period = st.selectbox("What seasonality do you want to use in the FB Prophet model?",
                       ("Year", 
@@ -291,6 +291,16 @@ if st.button('Run Analysis on Selected Steps'):
         fig.update_layout(
             autosize=False,
             width = 900,)
+        fig.update_layout(
+        title= ticker + "Standard Deviation",
+        xaxis_title="Date",
+        yaxis_title="St Dev",
+        font=dict(
+            family="Times New Roman",
+            size=13,
+            color="#7f7f7f"
+        ))
+    
 
         st.plotly_chart(fig, theme = 'streamlit')
 
