@@ -308,7 +308,7 @@ if st.button('Run Analysis on Selected Steps'):
         forecast = model.predict(forecast)
         fig = plot_plotly(model, forecast, trend=True, )
         fig.update_layout(
-                title="FB Prophet Projections for  AAPL",
+                title="FB Prophet Projections for " + ticker,
                 xaxis_title="Date",
                 yaxis_title="Price USD",
                 font=dict(
