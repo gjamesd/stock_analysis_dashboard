@@ -18,7 +18,8 @@ import plotly.graph_objs as go
 import plotly.offline as py
 from plotly.subplots import make_subplots
 
-import talib as ta
+
+import talib as ta 
 
 
 
@@ -325,15 +326,15 @@ if st.button('Run Analysis on Selected Steps'):
     s_d =  yfin.Ticker(ticker).info
     st.write("Trailing PEG Ratio:", s_d['trailingPegRatio'])
     st.write("Market Cap:", s_d['marketCap'])
-    st.write("EBITDA:", s_d['ebitda'])
+    st.write("Enterprise to EBITDA:", s_d['enterpriseToEbitda'])
+    st.write("EBITDA to margins :", s_d['ebitdaMargins'])
     st.write("Current Price: ", s_d['currentPrice'])
     st.write('Trailing PE: ', s_d['trailingPE'])
     st.write('Forward PE: ', s_d['forwardPE'])
-    st.write("Total Debt: ", s_d['totalDebt'])
-    st.write("Total Revenue:", s_d['totalRevenue'])
+    st.write("Peg Ratio:", s_d['pegRatio'])
+    st.write("Total Debt/Revenue:", s_d['totalDebt'] / s_d['totalRevenue'])
     st.write("Debt to Equity:", s_d['debtToEquity'])
-    st.write("Total Debt:", s_d['totalDebt'])
-    st.write("Total Revenue:",  s_d['totalRevenue']) 
+    st.write("Trailing Annual Dividend Yield :",  s_d['trailingAnnualDividendYield']) 
     st.write(" ")
     st.write("Current Price:", s_d['currentPrice'])
     st.write("Recommendation:", s_d['recommendationKey'].upper())
